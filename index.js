@@ -9,7 +9,7 @@ const port = process.env.PORT || 7011;
 const mongoUri = process.env.MONGO_URI; // Assurez-vous que cette variable est définie dans votre fichier .env
 
 // Connexion à MongoDB
-mongoose.connect(mongoUri, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(mongoUri)
     .then(() => console.log('Connected to MongoDB'))
     .catch(err => console.error('Could not connect to MongoDB', err));
 
