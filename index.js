@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
+const connectDB = require('./config/database');
 
 dotenv.config();
 
@@ -9,9 +10,7 @@ const port = process.env.PORT || 7011;
 const mongoUri = process.env.MONGO_URI; // Assurez-vous que cette variable est définie dans votre fichier .env
 
 // Connexion à MongoDB
-mongoose.connect(mongoUri)
-    .then(() => console.log('Connected to MongoDB'))
-    .catch(err => console.error('Could not connect to MongoDB', err));
+connectDB();
 
 // Middleware
 app.use(express.json());
