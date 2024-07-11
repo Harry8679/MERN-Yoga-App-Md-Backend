@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
-    "load-users": "node loadUsers.js"
+    "load-users": "node utils/loadUsers.util.js"
   },
   "keywords": [],
   "author": "",
